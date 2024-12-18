@@ -3,8 +3,32 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
-      <div className="container mx-auto px-4 py-20 text-white text-center">
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source
+          src="https://assets.mixkit.co/videos/preview/mixkit-fireworks-illuminating-the-beach-at-night-4157-large.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Gradient Overlay */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full z-10"
+        style={{
+          background: "linear-gradient(102.3deg, rgba(147,39,143,0.8) 5.9%, rgba(234,172,232,0.8) 64%, rgba(246,219,245,0.8) 89%)"
+        }}
+      />
+
+      {/* Content */}
+      <div className="container mx-auto px-4 py-20 text-white text-center relative z-20">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
