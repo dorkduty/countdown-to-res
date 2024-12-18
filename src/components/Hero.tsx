@@ -24,14 +24,6 @@ export const Hero = () => {
         </video>
       </div>
 
-      {/* Gradient Overlay */}
-      <div 
-        className="absolute inset-0 z-10"
-        style={{
-          background: "linear-gradient(102.3deg, rgba(147,39,143,0.2) 5.9%, rgba(234,172,232,0.2) 64%, rgba(246,219,245,0.2) 89%)"
-        }}
-      />
-
       {/* Content */}
       <div className="container mx-auto px-4 py-20 text-white text-center relative z-20">
         <motion.h1 
