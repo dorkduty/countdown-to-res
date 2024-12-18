@@ -19,7 +19,7 @@ export const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-2xl md:text-3xl mb-8"
         >
-          New Year's Eve 2024
+          Join us for an unforgettable New Year's Eve celebration as RES takes the stage for a spectacular performance to welcome 2024
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
