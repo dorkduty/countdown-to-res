@@ -6,22 +6,14 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+      {/* Image Background */}
       <div className="absolute inset-0 w-full h-full">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb"
+          alt="Starry night sky"
           className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
           style={{ zIndex: 0 }}
-        >
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-fireworks-illuminating-the-beach-at-night-4157-large.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        />
       </div>
 
       {/* Content */}
