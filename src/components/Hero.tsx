@@ -11,7 +11,7 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-6xl md:text-8xl font-bold mb-6"
         >
-          RES
+          (RES)ET with RES
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0 }}
