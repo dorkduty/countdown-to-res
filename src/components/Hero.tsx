@@ -9,11 +9,13 @@ export const Hero = () => {
       {/* Image Background */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb"
-          alt="Starry night sky"
+          src="https://images.unsplash.com/photo-1467810563316-b5476525c0f9"
+          alt="New Year's fireworks celebration"
           className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
           style={{ zIndex: 0 }}
         />
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black opacity-40" style={{ zIndex: 1 }}></div>
       </div>
 
       {/* Content */}
