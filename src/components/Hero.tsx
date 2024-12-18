@@ -9,8 +9,8 @@ export const Hero = () => {
       {/* Image Background */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="https://images.unsplash.com/photo-1467810563316-b5476525c0f9"
-          alt="New Year's fireworks celebration"
+          src="/lovable-uploads/cc06fe20-a9e2-4d30-bbe4-91b50f03f583.png"
+          alt="RES artist promotional image"
           className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
           style={{ zIndex: 0 }}
         />
