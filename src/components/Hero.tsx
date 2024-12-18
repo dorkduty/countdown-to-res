@@ -2,26 +2,31 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
+  console.log("Hero component rendered"); // Adding console log to track component rendering
+
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source
-          src="https://assets.mixkit.co/videos/preview/mixkit-fireworks-illuminating-the-beach-at-night-4157-large.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
+          style={{ zIndex: 0 }}
+        >
+          <source
+            src="https://assets.mixkit.co/videos/preview/mixkit-fireworks-illuminating-the-beach-at-night-4157-large.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       {/* Gradient Overlay */}
       <div 
-        className="absolute top-0 left-0 w-full h-full z-10"
+        className="absolute inset-0 z-10"
         style={{
           background: "linear-gradient(102.3deg, rgba(147,39,143,0.8) 5.9%, rgba(234,172,232,0.8) 64%, rgba(246,219,245,0.8) 89%)"
         }}
