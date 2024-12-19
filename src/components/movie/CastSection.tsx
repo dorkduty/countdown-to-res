@@ -11,7 +11,7 @@ const castMembers = [
   {
     name: "Roberto Sanchez",
     role: "Detective Martinez",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces"
+    image: "/lovable-uploads/41a868d7-dd88-4d41-9929-f49e032ce64d.png"
   },
   {
     name: "Jeff Cole",
