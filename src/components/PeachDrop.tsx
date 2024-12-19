@@ -35,22 +35,33 @@ export const PeachDrop = () => {
               </div>
             </div>
 
-            <div className="space-y-4 text-lg text-gray-300">
-              <p>
-                Join us for Atlanta's iconic New Year's Eve celebration! Mayor Andre Dickens 
-                presents the Southeast's most beloved tradition featuring an incredible lineup:
-              </p>
-              
-              <ul className="list-none space-y-2">
-                <li className="font-semibold text-purple-400">• Big Boi</li>
-                <li className="font-semibold text-pink-400">• Neon Trees</li>
-                <li className="font-semibold text-red-400">• RES</li>
-              </ul>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="space-y-4 text-lg text-gray-300">
+                <p>
+                  Join us for Atlanta's iconic New Year's Eve celebration! Mayor Andre Dickens 
+                  presents the Southeast's most beloved tradition featuring an incredible lineup:
+                </p>
+                
+                <ul className="list-none space-y-2">
+                  <li className="font-semibold text-purple-400">• Big Boi</li>
+                  <li className="font-semibold text-pink-400">• Neon Trees</li>
+                  <li className="font-semibold text-red-400">• RES</li>
+                </ul>
 
-              <p>
-                Be part of the tens of thousands gathering to watch the historic peach drop 
-                at midnight and ring in 2025 in true ATL style!
-              </p>
+                <p>
+                  Be part of the tens of thousands gathering to watch the historic peach drop 
+                  at midnight and ring in 2025 in true ATL style!
+                </p>
+              </div>
+
+              <div className="relative">
+                <img 
+                  src="https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1734640445773x591961549519086640/BIGBOI-FRANNIEANDALI-COLOR-2018-1605-R.jpg?_gl=1*vbof5d*_gcl_au*MTUwODk1MDg1My4xNzM0NDg0NTAx*_ga*MTY2MzU2NjI1LjE3MzQ0ODQ1MDI.*_ga_BFPVR2DEE2*MTczNDYzODEwNC4zLjEuMTczNDY0MDQzOC41OC4wLjA."
+                  alt="Big Boi"
+                  className="rounded-lg shadow-xl w-full object-cover aspect-[4/3]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
