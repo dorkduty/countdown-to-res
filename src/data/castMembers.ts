@@ -21,7 +21,7 @@ export const castMembers = [
   },
   {
     name: "Jeff Cole",
-    role: "Mike Smith",
+    role: "Manny",
     image: "/lovable-uploads/dfb2f6a7-28f0-49d2-8fda-6a6cde89c9a0.png"
   },
   {
@@ -30,8 +30,8 @@ export const castMembers = [
     image: "/lovable-uploads/d7bd065c-e695-4dcb-a5d4-0810ebac51ac.png"
   },
   {
-    name: "Mike DeFoor",
-    role: "Manny",
+    name: "Miko DeFoor",
+    role: "Mike Smith",
     image: "/lovable-uploads/8fe5b522-da89-45f5-b0ca-d23472772227.png"
   },
   {
