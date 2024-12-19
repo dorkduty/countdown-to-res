@@ -18,19 +18,6 @@ export const SpotifyPlayer = () => {
           </h2>
           
           <div className="space-y-6">
-            {/* Golden Boys */}
-            <div className="w-full">
-              <iframe
-                src="https://open.spotify.com/embed/track/0FsvXgAhVHXFGdXL6xohaH"
-                width="100%"
-                height="152"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="rounded-lg"
-              ></iframe>
-            </div>
-            
             {/* They Say Vision */}
             <div className="w-full">
               <iframe
@@ -44,10 +31,23 @@ export const SpotifyPlayer = () => {
               ></iframe>
             </div>
             
-            {/* Ice King */}
+            {/* How I Do */}
             <div className="w-full">
               <iframe
                 src="https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+            
+            {/* Let Love */}
+            <div className="w-full">
+              <iframe
+                src="https://open.spotify.com/embed/track/0FsvXgAhVHXFGdXL6xohaH"
                 width="100%"
                 height="152"
                 frameBorder="0"
