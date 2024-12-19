@@ -15,10 +15,17 @@ export const MoviePreview = () => {
             <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
               Life of Mike
             </h2>
+            <div className="flex items-center gap-4 text-sm">
+              <span className="border border-gray-500 px-2 py-1 rounded">NR</span>
+              <span>Summer 2025</span>
+            </div>
             <p className="text-lg text-gray-300">
-              A groundbreaking film starring RES, coming to theaters Spring 2024.
+              A groundbreaking film starring RES, coming to theaters Summer 2025.
               Follow the extraordinary journey of Mike Thompson, a music producer
               who changed the industry forever.
+            </p>
+            <p className="text-lg text-gray-300">
+              Directed by Derick Halliman
             </p>
             <a 
               href="https://www.imdb.com/title/tt31850564" 
