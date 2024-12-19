@@ -16,7 +16,7 @@ export const Hero = () => {
         <img
           src="/lovable-uploads/cc06fe20-a9e2-4d30-bbe4-91b50f03f583.png"
           alt="RES artist promotional image"
-          className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover md:object-center object-[30%] sm:object-[40%]"
+          className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover md:object-center object-[40%] sm:object-[40%]"
           style={{ zIndex: 0 }}
         />
         {/* Dark overlay for better text readability */}
@@ -34,7 +34,7 @@ export const Hero = () => {
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left">
             (RES)ET with RES
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 text-gray-200 text-left md:max-w-[50%] max-w-[85%]">
+          <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[50%] max-w-[85%]">
             Join acclaimed singer RES for a show-stopping performance to ring in 2025, and get an exclusive first look at Life of Mike, her highly anticipated feature film debut.
           </p>
           <div className="flex justify-start">
