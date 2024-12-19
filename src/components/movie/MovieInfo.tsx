@@ -21,9 +21,10 @@ export const MovieInfo = () => {
         Follow the extraordinary journey of Mike Thompson, a music producer
         who changed the industry forever.
       </p>
-      <p className="text-lg text-gray-300">
-        Directed by Derick Halliman
-      </p>
+      <div className="space-y-1">
+        <p className="text-sm uppercase tracking-wider text-gray-400">Director</p>
+        <p className="text-lg font-semibold text-gray-200">Derick Halliman</p>
+      </div>
       <a 
         href="https://www.imdb.com/title/tt31850564" 
         target="_blank" 
@@ -33,7 +34,7 @@ export const MovieInfo = () => {
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
           alt="IMDB"
-          className="h-12 w-auto"
+          className="h-8 w-auto" // Changed from h-12 to h-8
         />
       </a>
     </motion.div>
