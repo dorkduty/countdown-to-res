@@ -34,7 +34,7 @@ export const Hero = () => {
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left">
             (RES)ET with RES
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 text-gray-200 text-left max-w-[50%]">
+          <p className="text-2xl md:text-3xl mb-8 text-gray-200 text-left md:max-w-[50%] max-w-[85%]">
             Join acclaimed singer RES for a show-stopping performance to ring in 2025, and get an exclusive first look at Life of Mike, her highly anticipated feature film debut.
           </p>
           <div className="flex justify-start">
