@@ -21,7 +21,7 @@ export const SpotifyPlayer = () => {
             {/* They Say Vision */}
             <div className="w-full">
               <iframe
-                src="https://open.spotify.com/embed/track/1YLJVmuzeM2YSUkCCaTNUB"
+                src="https://open.spotify.com/embed/track/2Gy7qnDwt8Z3MNxqat4CsK"
                 width="100%"
                 height="152"
                 frameBorder="0"
@@ -31,23 +31,23 @@ export const SpotifyPlayer = () => {
               ></iframe>
             </div>
             
-            {/* How I Do */}
+            {/* Ice King */}
+            <div className="w-full">
+              <iframe
+                src="https://open.spotify.com/embed/track/0kYUrMBQDWQw2dDhZjHu3q"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+            
+            {/* Golden Boys */}
             <div className="w-full">
               <iframe
                 src="https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6"
-                width="100%"
-                height="152"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="rounded-lg"
-              ></iframe>
-            </div>
-            
-            {/* Let Love */}
-            <div className="w-full">
-              <iframe
-                src="https://open.spotify.com/embed/track/0FsvXgAhVHXFGdXL6xohaH"
                 width="100%"
                 height="152"
                 frameBorder="0"
