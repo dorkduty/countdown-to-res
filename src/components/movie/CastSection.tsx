@@ -14,7 +14,7 @@ const castMembers = [
     image: "/lovable-uploads/41a868d7-dd88-4d41-9929-f49e032ce64d.png"
   },
   {
-    name: "Jeff Cole",
+    name: "Jason Gilmore",
     role: "Detective Johnson",
     image: "/lovable-uploads/e581e58d-a588-4b85-bec0-a328494abd3b.png"
   },
@@ -29,7 +29,7 @@ const castMembers = [
     image: "/lovable-uploads/3df10637-d724-4fcb-a53a-325fad440721.png"
   },
   {
-    name: "Miko DeFoor",
+    name: "Jeff Cole",
     role: "Mike",
     image: "/lovable-uploads/dfb2f6a7-28f0-49d2-8fda-6a6cde89c9a0.png"
   },
@@ -39,7 +39,7 @@ const castMembers = [
     image: "/lovable-uploads/d7bd065c-e695-4dcb-a5d4-0810ebac51ac.png"
   },
   {
-    name: "Jason Gilmore",
+    name: "Mike DeFoor",
     role: "Detective Williams",
     image: "/lovable-uploads/8fe5b522-da89-45f5-b0ca-d23472772227.png"
   },
