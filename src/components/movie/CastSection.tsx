@@ -2,39 +2,39 @@ import { motion } from "framer-motion";
 
 const castMembers = [
   {
-    name: "Miko DeFoor",
-    role: "Mike Smith",
+    name: "Roberto Sanchez",
+    role: "Detective Martinez",
     image: "https://m.media-amazon.com/images/M/MV5BNzg1MzM4OTgtZTU5Mi00ZjU4LWI5ZjQtNmY4ZTJlNzk5ZTBkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
   },
   {
-    name: "Shareese Ballard",
-    role: "Celeste Smith",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+    name: "Jeff Cole",
+    role: "Detective Johnson",
+    image: "https://m.media-amazon.com/images/M/MV5BNzg1MzM4OTgtZTU5Mi00ZjU4LWI5ZjQtNmY4ZTJlNzk5ZTBkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
   },
   {
-    name: "Derick Halliman",
-    role: "Darius",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+    name: "Njema Williams",
+    role: "Officer Thompson",
+    image: "https://m.media-amazon.com/images/M/MV5BNzg1MzM4OTgtZTU5Mi00ZjU4LWI5ZjQtNmY4ZTJlNzk5ZTBkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
   },
   {
-    name: "Tiffany Denise",
-    role: "Tiffany",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb"
+    name: "Toni Belafonte",
+    role: "Sarah",
+    image: "https://m.media-amazon.com/images/M/MV5BNzg1MzM4OTgtZTU5Mi00ZjU4LWI5ZjQtNmY4ZTJlNzk5ZTBkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
   },
   {
-    name: "Tiffany Hobbs",
-    role: "Tiffany",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+    name: "Miko DeFoor",
+    role: "Mike",
+    image: "https://m.media-amazon.com/images/M/MV5BNzg1MzM4OTgtZTU5Mi00ZjU4LWI5ZjQtNmY4ZTJlNzk5ZTBkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
   },
   {
-    name: "Tiffany Denise Hobbs",
-    role: "Tiffany",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+    name: "Jason Gilmore",
+    role: "Detective Williams",
+    image: "https://m.media-amazon.com/images/M/MV5BNzg1MzM4OTgtZTU5Mi00ZjU4LWI5ZjQtNmY4ZTJlNzk5ZTBkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
   },
   {
-    name: "Tiffany D. Hobbs",
-    role: "Tiffany",
-    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce"
+    name: "Charlotte Haynes Hazzard",
+    role: "Detective Morris",
+    image: "https://m.media-amazon.com/images/M/MV5BNzg1MzM4OTgtZTU5Mi00ZjU4LWI5ZjQtNmY4ZTJlNzk5ZTBkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
   }
 ];
 
