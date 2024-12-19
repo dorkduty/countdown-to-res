@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
-  console.log("Hero component rendered"); // Adding console log to track component rendering
+  console.log("Hero component rendered");
 
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
@@ -15,35 +15,32 @@ export const Hero = () => {
           style={{ zIndex: 0 }}
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black opacity-40" style={{ zIndex: 1 }}></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40" style={{ zIndex: 1 }}></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 py-20 text-white text-center relative z-20">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-6xl md:text-8xl font-bold mb-6"
-        >
-          (RES)ET with RES
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-2xl md:text-3xl mb-8"
-        >
-          Join us for an unforgettable New Year's Eve celebration as RES takes the stage for a spectacular performance to welcome 2024
-        </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto"
         >
-          <Button size="lg" className="bg-white text-purple-600 hover:bg-purple-100">
-            Get Tickets
-          </Button>
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+            (RES)ET with RES
+          </h1>
+          <p className="text-2xl md:text-3xl mb-8 text-gray-200">
+            Join us for an unforgettable New Year's Eve celebration as RES takes the stage 
+            for a spectacular performance to welcome 2024
+          </p>
+          <div className="flex gap-4 justify-center">
+            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8">
+              Get Tickets
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              Learn More
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -4,7 +4,7 @@ export const Bio = () => {
   console.log("Bio component rendered");
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -12,9 +12,11 @@ export const Bio = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gradient">Meet RES</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+            Meet RES
+          </h2>
           
-          <div className="space-y-6 text-lg text-gray-700">
+          <div className="space-y-6 text-lg text-gray-300">
             <p>
               Res is a genre-defying artist and Philadelphia native who has captivated audiences 
               for over two decades with her unique blend of soul, rock, and alternative R&B. 
