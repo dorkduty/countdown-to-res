@@ -19,7 +19,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-20 text-white relative z-20">
+      <div className="container mx-auto px-8 py-20 text-white relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export const Hero = () => {
             (RES)ET with RES
           </h1>
           <p className="text-2xl md:text-3xl mb-8 text-gray-200 text-left max-w-[50%]">
-            Join acclaimed singer RES for a show-stopping performance to ring in 2024, and get an exclusive first look at Life of Mike, her highly anticipated 2025 feature film debut. Don't miss this unforgettable night of music and excitement!
+            Join acclaimed singer RES for a show-stopping performance to ring in 2024, and get an exclusive first look at Life of Mike, her highly anticipated 2025 feature film debut.
           </p>
           <div className="flex justify-start">
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8">
