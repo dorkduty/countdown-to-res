@@ -5,7 +5,7 @@ import { CastSection } from "./movie/CastSection";
 export const MoviePreview = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-black to-purple-900 text-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8 md:px-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <MovieInfo />
           <motion.div
