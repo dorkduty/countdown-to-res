@@ -4,6 +4,7 @@ import { Newsletter } from "@/components/Newsletter";
 import { Bio } from "@/components/Bio";
 import { SpotifyPlayer } from "@/components/SpotifyPlayer";
 import { PeachDrop } from "@/components/PeachDrop";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <SpotifyPlayer />
       <MoviePreview />
       <Newsletter />
+      <Footer />
     </main>
   );
 };
