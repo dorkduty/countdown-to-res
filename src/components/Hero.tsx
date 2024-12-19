@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 export const Hero = () => {
   console.log("Hero component rendered");
 
+  const scrollToPeachDrop = () => {
+    const element = document.getElementById('peach-drop');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Image Background */}
@@ -33,7 +38,11 @@ export const Hero = () => {
             Join acclaimed singer RES for a show-stopping performance to ring in 2025, and get an exclusive first look at Life of Mike, her highly anticipated feature film debut.
           </p>
           <div className="flex justify-start">
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8">
+            <Button 
+              size="lg" 
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8"
+              onClick={scrollToPeachDrop}
+            >
               Event Details
             </Button>
           </div>

@@ -6,7 +6,7 @@ export const PeachDrop = () => {
   console.log("PeachDrop component rendered");
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-900 via-black to-black text-white">
+    <section id="peach-drop" className="py-20 bg-gradient-to-br from-purple-900 via-black to-black text-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
