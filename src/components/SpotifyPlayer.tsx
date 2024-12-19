@@ -17,45 +17,18 @@ export const SpotifyPlayer = () => {
             Listen to RES
           </h2>
           
-          <div className="space-y-6">
-            {/* They Say Vision */}
-            <div className="w-full">
-              <iframe
-                src="https://open.spotify.com/embed/track/6Vc5wAMmXdKIAM7WUoEb7N"
-                width="100%"
-                height="152"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="rounded-lg"
-              ></iframe>
-            </div>
-            
-            {/* Ice King */}
-            <div className="w-full">
-              <iframe
-                src="https://open.spotify.com/embed/track/2YZyLoL8N0Wb9xBt1NhZWg"
-                width="100%"
-                height="152"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="rounded-lg"
-              ></iframe>
-            </div>
-            
-            {/* Golden Boys */}
-            <div className="w-full">
-              <iframe
-                src="https://open.spotify.com/embed/track/4jXl6VtkFFKIt3ycUQc5LT"
-                width="100%"
-                height="152"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="rounded-lg"
-              ></iframe>
-            </div>
+          <div className="w-full">
+            <iframe 
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/artist/56YiNz2C704YPpRtPvMBg7?utm_source=generator" 
+              width="100%" 
+              height="352" 
+              frameBorder="0" 
+              allowFullScreen 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy"
+              className="rounded-lg"
+            ></iframe>
           </div>
         </motion.div>
       </div>
