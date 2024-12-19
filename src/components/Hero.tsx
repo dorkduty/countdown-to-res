@@ -19,26 +19,23 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-20 text-white text-center relative z-20">
+      <div className="container mx-auto px-4 py-20 text-white relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl"
         >
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left">
             (RES)ET with RES
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 text-gray-200">
+          <p className="text-2xl md:text-3xl mb-8 text-gray-200 text-left">
             Join us for an unforgettable New Year's Eve celebration as RES takes the stage 
             for a spectacular performance to welcome 2024
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex justify-start">
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8">
-              Get Tickets
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Learn More
+              Event Details
             </Button>
           </div>
         </motion.div>
