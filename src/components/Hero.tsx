@@ -16,7 +16,7 @@ export const Hero = () => {
         <img
           src="/lovable-uploads/cc06fe20-a9e2-4d30-bbe4-91b50f03f583.png"
           alt="RES artist promotional image"
-          className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
+          className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover md:object-center object-[70%] sm:object-[60%]"
           style={{ zIndex: 0 }}
         />
         {/* Dark overlay for better text readability */}
