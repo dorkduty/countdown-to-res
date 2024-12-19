@@ -29,9 +29,8 @@ export const Hero = () => {
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left">
             (RES)ET with RES
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 text-gray-200 text-left">
-            Join us for an unforgettable New Year's Eve celebration as RES takes the stage 
-            for a spectacular performance to welcome 2024
+          <p className="text-2xl md:text-3xl mb-8 text-gray-200 text-left max-w-[30%]">
+            Join acclaimed singer RES for a show-stopping performance to ring in 2024, and get an exclusive first look at Life of Mike, her highly anticipated 2025 feature film debut. Don't miss this unforgettable night of music and excitement!
           </p>
           <div className="flex justify-start">
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8">
