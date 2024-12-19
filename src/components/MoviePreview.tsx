@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export const MoviePreview = () => {
@@ -25,13 +24,13 @@ export const MoviePreview = () => {
               href="https://www.imdb.com/title/tt31850564" 
               target="_blank" 
               rel="noopener noreferrer"
+              className="inline-block hover:opacity-80 transition-opacity"
             >
-              <Button 
-                variant="default"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-              >
-                IMDB
-              </Button>
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg"
+                alt="IMDB"
+                className="h-12 w-auto"
+              />
             </a>
           </motion.div>
           <motion.div
