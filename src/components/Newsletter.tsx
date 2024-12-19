@@ -24,10 +24,10 @@ export const Newsletter = () => {
           className="max-w-2xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-            Stay Updated
+            Claim Free Movie Tickets
           </h2>
           <p className="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
-            Be the first to know about ticket releases, movie premieres, and exclusive content.
+            Be the first to see Life of Mike when it arrives in theaters in 2025.
           </p>
           <form onSubmit={handleSubmit} className="max-w-md mx-auto flex gap-4">
             <Input
