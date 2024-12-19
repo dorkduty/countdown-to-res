@@ -21,9 +21,18 @@ export const MoviePreview = () => {
               Follow the extraordinary journey of Mike Thompson, a music producer
               who changed the industry forever.
             </p>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10">
-              Watch Trailer
-            </Button>
+            <a 
+              href="https://www.imdb.com/title/tt31850564" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button 
+                variant="default"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+              >
+                IMDB
+              </Button>
+            </a>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
