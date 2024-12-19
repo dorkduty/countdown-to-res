@@ -16,32 +16,32 @@ const castMembers = [
   {
     name: "Jeff Cole",
     role: "Detective Johnson",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces"
+    image: "/lovable-uploads/e581e58d-a588-4b85-bec0-a328494abd3b.png"
   },
   {
     name: "Njema Williams",
     role: "Officer Thompson",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=faces"
+    image: "/lovable-uploads/3750ced3-77ee-4c9e-a29a-7789f183f03f.png"
   },
   {
     name: "Toni Belafonte",
     role: "Sarah",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=faces"
+    image: "/lovable-uploads/3df10637-d724-4fcb-a53a-325fad440721.png"
   },
   {
     name: "Miko DeFoor",
     role: "Mike",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces"
+    image: "/lovable-uploads/dfb2f6a7-28f0-49d2-8fda-6a6cde89c9a0.png"
   },
   {
     name: "Jason Gilmore",
     role: "Detective Williams",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=faces"
+    image: "/lovable-uploads/8fe5b522-da89-45f5-b0ca-d23472772227.png"
   },
   {
     name: "Charlotte Haynes Hazzard",
     role: "Detective Morris",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=faces"
+    image: "/lovable-uploads/3f337eb6-0073-4610-aeec-f5e043f10453.png"
   }
 ];
 
