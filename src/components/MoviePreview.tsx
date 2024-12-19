@@ -15,13 +15,16 @@ export const MoviePreview = () => {
             transition={{ duration: 0.8 }}
             className="aspect-video rounded-lg overflow-hidden shadow-2xl"
           >
-            <div className="w-full h-full rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
-                alt="Life of Mike Movie Poster"
-                className="w-full h-full object-cover"
+            <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+              <iframe 
+                src="https://player.vimeo.com/video/1034563420?h=3f4d4cb099&badge=0&autopause=0&player_id=0&app_id=58479"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                title="Life of Mike Movie Preview"
               />
             </div>
+            <script src="https://player.vimeo.com/api/player.js" async></script>
           </motion.div>
         </div>
 
