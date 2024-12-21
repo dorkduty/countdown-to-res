@@ -5,6 +5,7 @@ import { Bio } from "@/components/Bio";
 import { SpotifyPlayer } from "@/components/SpotifyPlayer";
 import { PeachDrop } from "@/components/PeachDrop";
 import { Footer } from "@/components/Footer";
+import { FloatingBar } from "@/components/FloatingBar";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <MoviePreview />
       <Newsletter />
       <Footer />
+      <FloatingBar />
     </main>
   );
 };
