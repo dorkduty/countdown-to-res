@@ -16,11 +16,6 @@ export const FloatingBar = () => {
     <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-purple-600/95 to-pink-600/95 backdrop-blur-sm border-t border-white/10 p-4 z-50">
       <div className="container mx-auto flex items-center justify-between gap-4 flex-wrap md:flex-nowrap">
         <div className="flex items-center gap-4">
-          <img 
-            src="https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1711377466117x490923242385622460/LIFE%20OF%20MIKE%20logo.svg?_gl=1*1gixdss*_gcl_au*NzIzNTgyNTUzLjE3MzQ2NDI2NzQ.*_ga*MTY2MzU2NjI1LjE3MzQ0ODQ1MDI.*_ga_BFPVR2DEE2*MTczNDc5OTAzNC40LjEuMTczNDc5OTA3Ny4xNy4wLjA." 
-            alt="LIFE OF MIKE" 
-            className="h-12 w-auto object-contain"
-          />
           <span className="text-white font-semibold">Starring RES</span>
         </div>
         
