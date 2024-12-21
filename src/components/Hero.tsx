@@ -16,7 +16,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
       {/* Navigation */}
-      <nav className="w-full fixed top-0 z-30 bg-black/50 backdrop-blur-sm">
+      <nav className="w-full fixed top-0 z-30">
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Mobile Menu Button */}
           <div className="md:hidden flex justify-end py-4">
@@ -60,7 +60,7 @@ export const Hero = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-purple-400 transition-colors"
+                  className="text-white hover:text-purple-400 transition-colors text-lg"
                 >
                   {item.text}
                 </button>

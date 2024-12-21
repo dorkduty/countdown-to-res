@@ -27,7 +27,7 @@ export const MoviePreview = () => {
               </div>
             </div>
             <p className="text-sm text-gray-400 italic text-center">
-              Featured song, "All I can" by RES
+              Featured song, "All I Can" by RES
             </p>
           </motion.div>
         </div>
