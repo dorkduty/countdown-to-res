@@ -38,5 +38,10 @@ export const castMembers = [
     name: "Jason Gilmore",
     role: "Dave",
     image: "/lovable-uploads/e581e58d-a588-4b85-bec0-a328494abd3b.png"
+  },
+  {
+    name: "Ole Goode",
+    role: "Pete",
+    image: "/lovable-uploads/6a1b994a-2975-442c-85e8-44045ed05f17.png"
   }
 ];

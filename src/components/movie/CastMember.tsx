@@ -24,7 +24,7 @@ export const CastMember = ({ name, role, image, index }: CastMemberProps) => {
         />
       </div>
       <h4 className="text-lg md:text-xl font-bold text-white mb-2">{name}</h4>
-      <p className="text-sm md:text-base text-gray-400">{role}</p>
+      <p className="text-sm md:text-base bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">{role}</p>
     </motion.div>
   );
 };

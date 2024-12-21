@@ -16,7 +16,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
       {/* Navigation */}
-      <nav className="w-full fixed top-0 z-30">
+      <nav className="w-full fixed top-0 z-30 pt-6">
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Mobile Menu Button */}
           <div className="md:hidden flex justify-end py-4">
