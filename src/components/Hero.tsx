@@ -1,58 +1,74 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
-import { Link } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 
 export const Hero = () => {
   console.log("Hero component rendered");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
       {/* Navigation */}
-      <div className="w-full absolute top-0 z-30 py-4">
-        <NavigationMenu className="max-w-screen-xl mx-auto">
-          <NavigationMenuList className="gap-6">
-            <NavigationMenuItem>
-              <NavigationMenuLink 
-                className={navigationMenuTriggerStyle() + " cursor-pointer"}
-                onClick={() => scrollToSection('about')}
-              >
-                ABOUT
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink 
-                className={navigationMenuTriggerStyle() + " cursor-pointer"}
-                onClick={() => scrollToSection('peach-drop')}
-              >
-                NYE
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink 
-                className={navigationMenuTriggerStyle() + " cursor-pointer"}
-                onClick={() => scrollToSection('spotify-player')}
-              >
-                MUSIC
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink 
-                className={navigationMenuTriggerStyle() + " cursor-pointer"}
-                onClick={() => scrollToSection('movie-preview')}
-              >
-                FILM
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
+      <nav className="w-full fixed top-0 z-30 bg-black/50 backdrop-blur-sm">
+        <div className="max-w-screen-xl mx-auto px-4">
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex justify-end py-4">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white hover:text-purple-400 transition-colors"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          </div>
+          
+          {/* Mobile Menu */}
+          <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden py-4`}>
+            <div className="flex flex-col space-y-4">
+              {[
+                { text: 'ABOUT', id: 'about' },
+                { text: 'NYE', id: 'peach-drop' },
+                { text: 'MUSIC', id: 'spotify-player' },
+                { text: 'FILM', id: 'movie-preview' }
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-white hover:text-purple-400 transition-colors text-left"
+                >
+                  {item.text}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex justify-center py-4">
+            <div className="flex space-x-8">
+              {[
+                { text: 'ABOUT', id: 'about' },
+                { text: 'NYE', id: 'peach-drop' },
+                { text: 'MUSIC', id: 'spotify-player' },
+                { text: 'FILM', id: 'movie-preview' }
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-white hover:text-purple-400 transition-colors"
+                >
+                  {item.text}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </nav>
 
       {/* Image Background */}
       <div className="absolute inset-0 w-full h-full">
@@ -62,7 +78,6 @@ export const Hero = () => {
           className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover md:object-center object-[40%] sm:object-[40%]"
           style={{ zIndex: 0 }}
         />
-        {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40" style={{ zIndex: 1 }}></div>
       </div>
 
@@ -84,9 +99,9 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="bg-purple-600 hover:bg-purple-700 text-white px-8"
-              onClick={() => window.open('https://nyepeachfest.com', '_blank')}
+              onClick={() => scrollToSection('peach-drop')}
             >
-              Attend
+              Join the Party
             </Button>
           </div>
         </motion.div>
