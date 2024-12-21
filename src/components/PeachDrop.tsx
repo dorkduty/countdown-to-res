@@ -70,7 +70,7 @@ export const PeachDrop = () => {
                 className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                 onClick={() => window.open('https://nyepeachfeast.com', '_blank')}
               >
-                Attend
+                Get Tickets
               </Button>
             </div>
 

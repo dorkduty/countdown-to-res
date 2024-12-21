@@ -40,7 +40,7 @@ export const Hero = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-purple-400 transition-colors text-left"
+                  className="text-white hover:text-purple-400 transition-colors text-left tracking-widest"
                 >
                   {item.text}
                 </button>
@@ -50,7 +50,7 @@ export const Hero = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex justify-center py-4">
-            <div className="flex space-x-8">
+            <div className="flex space-x-12">
               {[
                 { text: 'ABOUT', id: 'about' },
                 { text: 'NYE', id: 'peach-drop' },
@@ -60,7 +60,7 @@ export const Hero = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-purple-400 transition-colors text-lg"
+                  className="text-white hover:text-purple-400 transition-colors text-lg tracking-[0.3em]"
                 >
                   {item.text}
                 </button>

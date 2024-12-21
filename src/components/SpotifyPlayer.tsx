@@ -11,7 +11,7 @@ export const SpotifyPlayer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center space-y-4"
+          className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
             Listen to RES
@@ -30,7 +30,7 @@ export const SpotifyPlayer = () => {
             />
           </div>
 
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-[30px]">
             <Button
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8"
