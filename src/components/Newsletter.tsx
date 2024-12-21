@@ -1,18 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { toast } from "sonner";
 import { motion } from "framer-motion";
 
 export const Newsletter = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Thanks for subscribing!");
-    setEmail("");
-  };
-
   return (
     <section className="py-20 bg-black">
       <div className="container mx-auto px-4 text-center">
@@ -29,19 +18,13 @@ export const Newsletter = () => {
           <p className="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
             Be the first to see Life of Mike when it arrives in theaters in 2025.
           </p>
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto flex gap-4">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-            />
-            <Button type="submit" className="bg-purple-600 hover:bg-purple-700 text-white">
-              Subscribe
-            </Button>
-          </form>
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8"
+            onClick={() => window.open('https://mountainparkmedia2.bubbleapps.io/version-test/life-of-mike?ticket=free', '_blank')}
+          >
+            Get Your Free Ticket
+          </Button>
         </motion.div>
       </div>
     </section>
