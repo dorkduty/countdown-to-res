@@ -1,16 +1,59 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   console.log("Hero component rendered");
 
-  const scrollToPeachDrop = () => {
-    const element = document.getElementById('peach-drop');
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
+    <section className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
+      {/* Navigation */}
+      <div className="w-full absolute top-0 z-30 py-4">
+        <NavigationMenu className="max-w-screen-xl mx-auto">
+          <NavigationMenuList className="gap-6">
+            <NavigationMenuItem>
+              <NavigationMenuLink 
+                className={navigationMenuTriggerStyle() + " cursor-pointer"}
+                onClick={() => scrollToSection('about')}
+              >
+                ABOUT
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink 
+                className={navigationMenuTriggerStyle() + " cursor-pointer"}
+                onClick={() => scrollToSection('peach-drop')}
+              >
+                NYE
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink 
+                className={navigationMenuTriggerStyle() + " cursor-pointer"}
+                onClick={() => scrollToSection('spotify-player')}
+              >
+                MUSIC
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink 
+                className={navigationMenuTriggerStyle() + " cursor-pointer"}
+                onClick={() => scrollToSection('movie-preview')}
+              >
+                FILM
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+
       {/* Image Background */}
       <div className="absolute inset-0 w-full h-full">
         <img
@@ -41,9 +84,9 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="bg-purple-600 hover:bg-purple-700 text-white px-8"
-              onClick={scrollToPeachDrop}
+              onClick={() => window.open('https://nyepeachfest.com', '_blank')}
             >
-              Event Details
+              Attend
             </Button>
           </div>
         </motion.div>
