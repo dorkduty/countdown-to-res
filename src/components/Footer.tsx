@@ -26,7 +26,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-black text-white py-12 pb-32">
       <div className="container mx-auto px-8">
         <div className="flex flex-col items-center space-y-6">
           <div className="flex items-center space-x-8">
