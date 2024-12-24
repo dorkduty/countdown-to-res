@@ -1,51 +1,57 @@
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 export const Bio = () => {
-  console.log("Bio component rendered");
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <section id="about" className="py-20 bg-black text-white">
+    <section id="about" className="py-20 bg-gradient-to-b from-black to-purple-900 text-white">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <img
-                src="https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1734644539639x543230705679802240/2A229279-9A7E-4F8D-B965-3C1F51B218A1_1_201_a.jpeg?_gl=1*1y9blj*_gcl_au*NzIzNTgyNTUzLjE3MzQ2NDI2NzQ.*_ga*MTY2MzU2NjI1LjE3MzQ0ODQ1MDI.*_ga_BFPVR2DEE2*MTczNDYzODEwNC4zLjEuMTczNDY0NDUyOC41Ny4wLjA."
-                alt="RES"
-                className="rounded-lg shadow-2xl w-full"
-              />
-            </motion.div>
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-                Meet RES
-              </h2>
-              
-              <div className="space-y-6 text-lg text-gray-300">
-                <p>
-                  Res is a genre-defying artist and Philadelphia native who has captivated audiences 
-                  for over two decades with her unique blend of soul, rock, and alternative R&B. 
-                  Her groundbreaking debut album, How I Do, celebrates its 20th anniversary, marking 
-                  a milestone in her career. The album features timeless tracks like "Golden Boys" 
-                  and "They-Say Vision," which continue to resonate with listeners worldwide.
-                </p>
-                
-                <p>
-                  Known for her powerful vocals, introspective songwriting, and dynamic stage presence, 
-                  Res has consistently pushed musical boundaries. Beyond her solo work, she has 
-                  collaborated with prominent artists and brought her versatility to DJing and live 
-                  performances. Res remains a beloved figure in the music scene, seamlessly blending 
-                  her Philly roots with a modern artistic vision.
-                </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+            Meet RES
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <p className="text-lg text-gray-300">
+                RES, the Philadelphia-born singer-songwriter, burst onto the music scene with her 
+                groundbreaking debut album "How I Do" in 2001. Her unique blend of rock, soul, and 
+                electronic music, coupled with her distinctive voice, earned her critical acclaim 
+                and a dedicated following.
+              </p>
+              <p className="text-lg text-gray-300">
+                Now, RES is expanding her artistic horizons with her feature film debut in "Life of Mike," 
+                while continuing to create innovative music that pushes boundaries and defies genre 
+                conventions.
+              </p>
+              <div className="flex justify-center md:justify-start">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                  onClick={() => scrollToSection('spotify-player')}
+                >
+                  Stream Now
+                </Button>
               </div>
+            </div>
+            
+            <div className="relative">
+              <img
+                src="/lovable-uploads/3750ced3-77ee-4c9e-a29a-7789f183f03f.png"
+                alt="RES portrait"
+                className="rounded-lg shadow-xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
             </div>
           </div>
         </motion.div>

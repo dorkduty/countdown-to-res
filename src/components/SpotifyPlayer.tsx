@@ -4,7 +4,7 @@ import { Download } from "lucide-react";
 
 export const SpotifyPlayer = () => {
   return (
-    <section id="spotify-player" className="py-20 bg-gradient-to-b from-purple-900 to-black text-white">
+    <section id="spotify-player" className="py-12 bg-gradient-to-b from-purple-900 to-black text-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export const SpotifyPlayer = () => {
             />
           </div>
 
-          <div className="flex justify-center mt-[30px]">
+          <div className="flex justify-center mt-[15px]">
             <Button
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8"

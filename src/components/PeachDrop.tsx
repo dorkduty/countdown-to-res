@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
 import { CalendarDays, Clock, MapPin } from "lucide-react";
 
 export const PeachDrop = () => {
@@ -16,7 +15,7 @@ export const PeachDrop = () => {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-            New Year's Eve Peach Festival
+            New Year's Eve Peach Drop
           </h2>
 
           <div className="bg-black/40 backdrop-blur-sm rounded-xl p-8 space-y-6">
@@ -63,17 +62,6 @@ export const PeachDrop = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
               </div>
             </div>
-
-            <div className="flex justify-center mt-8">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-                onClick={() => window.open('https://nyepeachfest.com', '_blank')}
-              >
-                Get Tickets
-              </Button>
-            </div>
-
           </div>
         </motion.div>
       </div>

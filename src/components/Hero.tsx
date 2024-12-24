@@ -15,8 +15,8 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
-      {/* Navigation */}
-      <nav className="w-full fixed top-0 z-30 pt-6">
+      {/* Navigation - hidden for now */}
+      <nav className="w-full fixed top-0 z-30 pt-6 hidden">
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Mobile Menu Button */}
           <div className="md:hidden flex justify-end py-4">
@@ -93,16 +93,36 @@ export const Hero = () => {
             (RES)ET with RES
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[50%] max-w-[85%]">
-            Join acclaimed singer RES for a show-stopping performance to ring in 2025, and get an exclusive first look at Life of Mike, her highly anticipated feature film debut.
+            Ring in 2025 with acclaimed singer RES at the Atlanta Peach Drop, and get an exclusive first look at "Life of Mike," her feature film debut!
           </p>
-          <div className="flex justify-start">
+          <div className="flex flex-col gap-6">
             <Button 
               size="lg" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 w-fit"
               onClick={() => scrollToSection('peach-drop')}
             >
-              Join the Party
+              Learn More
             </Button>
+            <div className="flex gap-8">
+              <button
+                onClick={() => scrollToSection('peach-drop')}
+                className="text-purple-400 hover:text-purple-300 transition-colors"
+              >
+                ATL Peach Drop
+              </button>
+              <button
+                onClick={() => scrollToSection('spotify-player')}
+                className="text-pink-400 hover:text-pink-300 transition-colors"
+              >
+                Reset Album
+              </button>
+              <button
+                onClick={() => scrollToSection('movie-preview')}
+                className="text-red-400 hover:text-red-300 transition-colors"
+              >
+                Trailer
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>
