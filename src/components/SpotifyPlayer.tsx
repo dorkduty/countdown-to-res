@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { Download, Music } from "lucide-react";
+import { Download } from "lucide-react";
 
 export const SpotifyPlayer = () => {
   return (
@@ -36,7 +36,7 @@ export const SpotifyPlayer = () => {
               className="bg-purple-600 hover:bg-purple-700 text-white px-8"
               onClick={() => window.open('https://www.dropbox.com/scl/fi/ouz4t72qsvwm8099zs3n6/Reset-by-Res.zip?rlkey=059mtezobcne4oxv1n2me078z&st=e9oad4a4&dl=0', '_blank')}
             >
-              <Music className="mr-2 h-4 w-4" />
+              <Download className="mr-2 h-4 w-4" />
               Download
             </Button>
           </div>

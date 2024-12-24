@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import { Music } from "lucide-react";
 
 export const Bio = () => {
   const scrollToSection = (id: string) => {
@@ -40,6 +41,7 @@ export const Bio = () => {
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                   onClick={() => scrollToSection('spotify-player')}
                 >
+                  <Music className="mr-2 h-4 w-4" />
                   Stream Now
                 </Button>
               </div>
