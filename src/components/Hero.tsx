@@ -118,7 +118,7 @@ export const Hero = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 w-fit"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 w-fit hidden"
               onClick={() => scrollToSection('peach-drop')}
             >
               Learn More
