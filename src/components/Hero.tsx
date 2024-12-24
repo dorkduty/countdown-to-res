@@ -96,13 +96,6 @@ export const Hero = () => {
             Ring in 2025 with acclaimed singer RES at the Atlanta Peach Drop, and get an exclusive first look at "Life of Mike," her feature film debut!
           </p>
           <div className="flex flex-col gap-6">
-            <Button 
-              size="lg" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 w-fit"
-              onClick={() => scrollToSection('peach-drop')}
-            >
-              Learn More
-            </Button>
             <div className="flex gap-8">
               <button
                 onClick={() => scrollToSection('peach-drop')}
@@ -123,6 +116,13 @@ export const Hero = () => {
                 Trailer
               </button>
             </div>
+            <Button 
+              size="lg" 
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 w-fit"
+              onClick={() => scrollToSection('peach-drop')}
+            >
+              Learn More
+            </Button>
           </div>
         </motion.div>
       </div>

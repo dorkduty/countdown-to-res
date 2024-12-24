@@ -47,7 +47,7 @@ export const Bio = () => {
             
             <div className="relative">
               <img
-                src="/lovable-uploads/3750ced3-77ee-4c9e-a29a-7789f183f03f.png"
+                src="/lovable-uploads/d7bd065c-e695-4dcb-a5d4-0810ebac51ac.png"
                 alt="RES portrait"
                 className="rounded-lg shadow-xl"
               />
