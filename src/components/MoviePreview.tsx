@@ -14,18 +14,21 @@ export const MoviePreview = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="aspect-video bg-black/40 rounded-lg overflow-hidden"
+              className="space-y-2"
             >
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/IwXamRdHSog?si=xeyKzUnqM41CWyVe" 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
+              <div className="aspect-video bg-black/40 rounded-lg overflow-hidden">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/IwXamRdHSog?si=xeyKzUnqM41CWyVe" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <p className="text-sm text-gray-400 italic">Featured song "All I Can" by RES</p>
             </motion.div>
           </div>
           <CastSection />

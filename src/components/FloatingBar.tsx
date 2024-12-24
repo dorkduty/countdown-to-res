@@ -19,9 +19,12 @@ export const FloatingBar = () => {
           <img 
             src="https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1711377466117x490923242385622460/LIFE%20OF%20MIKE%20logo.svg" 
             alt="LIFE OF MIKE" 
-            className="h-8 md:h-10 w-auto object-contain"
+            className="h-6 md:h-8 w-auto object-contain"
           />
-          <span className="text-white font-semibold whitespace-nowrap">Starring RES</span>
+          <div className="flex flex-col">
+            <span className="text-white font-semibold text-lg">Starring</span>
+            <span className="text-white font-semibold text-lg">RES</span>
+          </div>
         </div>
         
         <div className="hidden md:block flex-1 text-white text-sm md:text-base md:mx-4">
