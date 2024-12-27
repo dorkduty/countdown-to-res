@@ -100,21 +100,21 @@ export const Hero = () => {
               <Button
                 variant="default"
                 onClick={() => scrollToSection('peach-drop')}
-                className="bg-purple-600 text-white hover:bg-purple-700"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 ATL Peach Drop
               </Button>
               <Button
                 variant="default"
                 onClick={() => scrollToSection('spotify-player')}
-                className="bg-pink-600 text-white hover:bg-pink-700"
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
               >
                 Reset Album
               </Button>
               <Button
                 variant="default"
                 onClick={() => scrollToSection('movie-preview')}
-                className="bg-red-600 text-white hover:bg-red-700"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground"
               >
                 Trailer
               </Button>
