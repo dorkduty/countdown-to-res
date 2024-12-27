@@ -22,7 +22,7 @@ export const SpotifyPlayer = () => {
               style={{ borderRadius: '12px' }}
               src="https://open.spotify.com/embed/artist/56YiNz2C704YPpRtPvMBg7?utm_source=generator"
               width="100%"
-              height="352"
+              height="450"
               frameBorder="0"
               allowFullScreen
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
