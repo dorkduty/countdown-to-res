@@ -98,23 +98,23 @@ export const Hero = () => {
           <div className="flex flex-col gap-6">
             <div className="flex flex-wrap gap-4">
               <Button
-                variant="ghost"
+                variant="default"
                 onClick={() => scrollToSection('peach-drop')}
-                className="text-purple-400 hover:text-purple-300 hover:bg-purple-400/10"
+                className="bg-purple-600 text-white hover:bg-purple-700"
               >
                 ATL Peach Drop
               </Button>
               <Button
-                variant="ghost"
+                variant="default"
                 onClick={() => scrollToSection('spotify-player')}
-                className="text-pink-400 hover:text-pink-300 hover:bg-pink-400/10"
+                className="bg-pink-600 text-white hover:bg-pink-700"
               >
                 Reset Album
               </Button>
               <Button
-                variant="ghost"
+                variant="default"
                 onClick={() => scrollToSection('movie-preview')}
-                className="text-red-400 hover:text-red-300 hover:bg-red-400/10"
+                className="bg-red-600 text-white hover:bg-red-700"
               >
                 Trailer
               </Button>
