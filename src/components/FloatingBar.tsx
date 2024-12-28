@@ -15,7 +15,7 @@ export const FloatingBar = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-purple-600/95 to-pink-600/95 backdrop-blur-sm border-t border-white/10 p-4 z-50">
       <div className="container mx-auto flex items-center justify-between gap-4 flex-wrap md:flex-nowrap">
-        <div className="flex items-center gap-4 w-full md:w-auto">
+        <div className="flex items-center justify-center w-full md:w-auto">
           <img 
             src="/lovable-uploads/983dbb92-8396-4656-8439-bc781fbb807f.png" 
             alt="LIFE OF MIKE" 
