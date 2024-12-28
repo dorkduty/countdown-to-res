@@ -17,14 +17,10 @@ export const FloatingBar = () => {
       <div className="container mx-auto flex items-center justify-between gap-4 flex-wrap md:flex-nowrap">
         <div className="flex items-center gap-4 w-full md:w-auto">
           <img 
-            src="https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1711377466117x490923242385622460/LIFE%20OF%20MIKE%20logo.svg" 
+            src="/lovable-uploads/983dbb92-8396-4656-8439-bc781fbb807f.png" 
             alt="LIFE OF MIKE" 
             className="h-6 md:h-8 w-auto object-contain"
           />
-          <div className="flex flex-col">
-            <span className="text-white font-semibold text-lg">Starring</span>
-            <span className="text-white font-semibold text-lg">RES</span>
-          </div>
         </div>
         
         <div className="hidden md:block flex-1 text-white text-sm md:text-base md:mx-4">
