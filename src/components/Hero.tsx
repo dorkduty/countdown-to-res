@@ -78,7 +78,7 @@ export const Hero = () => {
             srcSet="/lovable-uploads/cc06fe20-a9e2-4d30-bbe4-91b50f03f583.png"
           />
           <img
-            src="/lovable-uploads/473dd9db-8faa-4375-a2d1-211ae35c3001.png"
+            src="/lovable-uploads/af5a2352-690a-4a57-9036-e34c78f1159e.png"
             alt="RES artist promotional image"
             className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover md:object-center object-[40%] sm:object-[40%]"
             style={{ zIndex: 0 }}
