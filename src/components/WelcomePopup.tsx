@@ -1,24 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { toast } from "sonner";
 
 export const WelcomePopup = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [musicEmail, setMusicEmail] = useState("");
   const [movieEmail, setMovieEmail] = useState("");
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, isMobile ? 5000 : 0);
+
+    return () => clearTimeout(timer);
+  }, [isMobile]);
 
   const handleMusicSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Music email submitted:", musicEmail);
-    // Add email submission logic here
+    toast.success("Thanks for subscribing! Your free music download link will be sent shortly.");
+    setMusicEmail("");
+    setOpen(false);
   };
 
   const handleMovieSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Movie email submitted:", movieEmail);
-    // Add email submission logic here
+    toast.success("Thanks for subscribing! Your free movie ticket will be sent shortly.");
+    setMovieEmail("");
+    setOpen(false);
   };
 
   return (
