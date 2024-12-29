@@ -6,10 +6,12 @@ import { SpotifyPlayer } from "@/components/SpotifyPlayer";
 import { PeachDrop } from "@/components/PeachDrop";
 import { Footer } from "@/components/Footer";
 import { FloatingBar } from "@/components/FloatingBar";
+import { WelcomePopup } from "@/components/WelcomePopup";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <WelcomePopup />
       <Hero />
       <PeachDrop />
       <Bio />
