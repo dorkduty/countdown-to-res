@@ -66,7 +66,7 @@ export const WelcomePopup = () => {
           <div className="p-6 bg-black">
             <div className="flex flex-col items-center space-y-4">
               <img
-                src="/lovable-uploads/f54a6319-c276-41cd-88ee-fdfa92d66154.png"
+                src="/lovable-uploads/e814f938-0883-488c-8a78-698a8364ffeb.png"
                 alt="Life of Mike Movie Poster"
                 className="w-48 h-48 object-cover rounded-lg shadow-lg"
               />
