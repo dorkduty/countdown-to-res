@@ -2,14 +2,37 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 export const FloatingBar = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thanks for subscribing!");
-    setEmail("");
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('subscribers')
+        .insert([
+          { 
+            email,
+            subscription_type: 'movie',
+            created_at: new Date().toISOString()
+          }
+        ]);
+
+      if (error) throw error;
+
+      toast.success("Thanks for subscribing!");
+      setEmail("");
+    } catch (error) {
+      console.error('Error saving subscription:', error);
+      toast.error("There was an error saving your subscription. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -34,13 +57,15 @@ export const FloatingBar = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            disabled={isSubmitting}
             className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-gray-300"
           />
           <Button 
             type="submit" 
             className="bg-white text-purple-600 hover:bg-white/90 whitespace-nowrap"
+            disabled={isSubmitting}
           >
-            Subscribe
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
       </div>

@@ -1,7 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 export const Newsletter = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleClick = async () => {
+    setIsSubmitting(true);
+    try {
+      window.open('https://mountainparkmedia2.bubbleapps.io/version-test/life-of-mike?ticket=free', '_blank');
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error("There was an error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-20 bg-black">
       <div className="container mx-auto px-4 text-center">
@@ -21,9 +38,10 @@ export const Newsletter = () => {
           <Button
             size="lg"
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8"
-            onClick={() => window.open('https://mountainparkmedia2.bubbleapps.io/version-test/life-of-mike?ticket=free', '_blank')}
+            onClick={handleClick}
+            disabled={isSubmitting}
           >
-            Get Your Free Ticket
+            {isSubmitting ? "Loading..." : "Get Your Free Ticket"}
           </Button>
         </motion.div>
       </div>

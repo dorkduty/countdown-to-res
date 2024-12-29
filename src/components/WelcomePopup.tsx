@@ -3,17 +3,9 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { toast } from "sonner";
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from "@/integrations/supabase/client";
 import { MusicSubscription } from "./subscription/MusicSubscription";
 import { MovieSubscription } from "./subscription/MovieSubscription";
-
-// Initialize Supabase client only if environment variables are available
-const supabase = import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY
-  ? createClient(
-      import.meta.env.VITE_SUPABASE_URL,
-      import.meta.env.VITE_SUPABASE_ANON_KEY
-    )
-  : null;
 
 export const WelcomePopup = () => {
   const [open, setOpen] = useState(false);
@@ -42,12 +34,6 @@ export const WelcomePopup = () => {
       setIsSubmitting(true);
       console.log(`Subscribing ${type} email:`, email);
       
-      if (!supabase) {
-        console.warn('Supabase is not configured. Please connect to Supabase first.');
-        toast.error("Unable to save subscription. Please try again later.");
-        return;
-      }
-
       const { error } = await supabase
         .from('subscribers')
         .insert([
