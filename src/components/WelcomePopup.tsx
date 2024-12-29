@@ -10,15 +10,24 @@ export const WelcomePopup = () => {
   const [open, setOpen] = useState(false);
   const [musicEmail, setMusicEmail] = useState("");
   const [movieEmail, setMovieEmail] = useState("");
+  const [pageLoaded, setPageLoaded] = useState(false);
   const isMobile = useIsMobile();
 
+  // Handle initial page load
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpen(true);
-    }, isMobile ? 5000 : 0);
+    setPageLoaded(true);
+  }, []);
 
-    return () => clearTimeout(timer);
-  }, [isMobile]);
+  // Handle popup display after page load
+  useEffect(() => {
+    if (pageLoaded) {
+      const timer = setTimeout(() => {
+        setOpen(true);
+      }, isMobile ? 5000 : 0);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile, pageLoaded]);
 
   const handleMusicSubmit = (e: React.FormEvent) => {
     e.preventDefault();
