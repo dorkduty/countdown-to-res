@@ -5,20 +5,26 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { toast } from "sonner";
+import { createClient } from '@supabase/supabase-js';
+import { Loader2 } from "lucide-react";
+
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_ANON_KEY
+);
 
 export const WelcomePopup = () => {
   const [open, setOpen] = useState(false);
   const [musicEmail, setMusicEmail] = useState("");
   const [movieEmail, setMovieEmail] = useState("");
   const [pageLoaded, setPageLoaded] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const isMobile = useIsMobile();
 
-  // Handle initial page load
   useEffect(() => {
     setPageLoaded(true);
   }, []);
 
-  // Handle popup display after page load
   useEffect(() => {
     if (pageLoaded) {
       const timer = setTimeout(() => {
@@ -29,20 +35,46 @@ export const WelcomePopup = () => {
     }
   }, [isMobile, pageLoaded]);
 
+  const handleSubscribe = async (email: string, type: 'music' | 'movie') => {
+    try {
+      setIsSubmitting(true);
+      console.log(`Subscribing ${type} email:`, email);
+      
+      const { error } = await supabase
+        .from('subscribers')
+        .insert([
+          { 
+            email, 
+            subscription_type: type,
+            created_at: new Date().toISOString()
+          }
+        ]);
+
+      if (error) throw error;
+
+      toast.success(`Thanks for subscribing! Your free ${type === 'music' ? 'music download link' : 'movie ticket'} will be sent shortly.`);
+      if (type === 'music') {
+        setMusicEmail("");
+      } else {
+        setMovieEmail("");
+      }
+      setOpen(false);
+    } catch (error) {
+      console.error('Error saving subscription:', error);
+      toast.error("There was an error saving your subscription. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const handleMusicSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Music email submitted:", musicEmail);
-    toast.success("Thanks for subscribing! Your free music download link will be sent shortly.");
-    setMusicEmail("");
-    setOpen(false);
+    handleSubscribe(musicEmail, 'music');
   };
 
   const handleMovieSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Movie email submitted:", movieEmail);
-    toast.success("Thanks for subscribing! Your free movie ticket will be sent shortly.");
-    setMovieEmail("");
-    setOpen(false);
+    handleSubscribe(movieEmail, 'movie');
   };
 
   return (
@@ -75,9 +107,21 @@ export const WelcomePopup = () => {
                   onChange={(e) => setMusicEmail(e.target.value)}
                   className="bg-white/90 text-sm"
                   required
+                  disabled={isSubmitting}
                 />
-                <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-sm">
-                  Download
+                <Button 
+                  type="submit" 
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-sm"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Subscribing...
+                    </>
+                  ) : (
+                    'Download'
+                  )}
                 </Button>
               </form>
             </div>
@@ -104,9 +148,21 @@ export const WelcomePopup = () => {
                   onChange={(e) => setMovieEmail(e.target.value)}
                   className="bg-white/90 text-sm"
                   required
+                  disabled={isSubmitting}
                 />
-                <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-sm">
-                  Submit
+                <Button 
+                  type="submit" 
+                  className="w-full bg-secondary hover:bg-secondary/90 text-sm"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Subscribing...
+                    </>
+                  ) : (
+                    'Submit'
+                  )}
                 </Button>
               </form>
             </div>
