@@ -34,15 +34,10 @@ export const WelcomePopup = () => {
       setIsSubmitting(true);
       console.log(`Subscribing ${type} email:`, email);
       
+      const table = type === 'music' ? 'music_downloads' : 'movie_tickets';
       const { error } = await supabase
-        .from('subscribers')
-        .insert([
-          { 
-            email, 
-            subscription_type: type,
-            created_at: new Date().toISOString()
-          }
-        ]);
+        .from(table)
+        .insert([{ email }]);
 
       if (error) throw error;
 
@@ -73,7 +68,7 @@ export const WelcomePopup = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-2xl p-0 overflow-auto border-0 max-h-[90vh] md:max-h-[95vh]">
+      <DialogContent className="max-w-2xl p-0 overflow-auto border-0 max-h-[90vh] md:max-h-[95vh] w-[min(350px,100%-32px)] md:w-auto">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
