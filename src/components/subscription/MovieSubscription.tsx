@@ -16,7 +16,7 @@ export const MovieSubscription = ({
   <div className="p-6 bg-primary">
     <div className="flex flex-col items-center space-y-4">
       <img
-        src="/lovable-uploads/e814f938-0883-488c-8a78-698a8364ffeb.png"
+        src="/lovable-uploads/dc48ccce-2d8f-4366-9d9c-44da187a43c6.png"
         alt="Life of Mike Movie Poster"
         className="w-48 h-48 object-cover rounded-lg shadow-lg"
       />

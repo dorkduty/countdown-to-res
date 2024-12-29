@@ -68,12 +68,12 @@ export const WelcomePopup = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-2xl p-0 overflow-auto border-0 max-h-[90vh] md:max-h-[95vh] w-[min(350px,100%-32px)] md:w-auto">
+      <DialogContent className="max-w-4xl p-0 overflow-auto border-0 max-h-[90vh] md:max-h-[95vh]">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-2"
+          className="grid grid-cols-1 md:grid-cols-2 w-[min(350px,100%-32px)] md:w-auto"
         >
           <MusicSubscription
             email={musicEmail}
