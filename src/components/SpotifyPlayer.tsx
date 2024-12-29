@@ -30,7 +30,7 @@ export const SpotifyPlayer = () => {
             />
           </div>
 
-          <div className="flex justify-center mt-[15px]">
+          <div className="flex justify-center mt-[15px] hidden">
             <Button
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8"
