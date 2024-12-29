@@ -115,7 +115,7 @@ export const Hero = () => {
                 onClick={() => scrollToSection('movie-preview')}
                 className="bg-red-400 hover:bg-red-500"
               >
-                Trailer
+                "Life of Mike" Trailer
               </Button>
               <Button
                 variant="default"
