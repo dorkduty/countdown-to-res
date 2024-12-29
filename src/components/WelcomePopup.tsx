@@ -23,7 +23,7 @@ export const WelcomePopup = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-2xl p-0 overflow-hidden">
+      <DialogContent className="max-w-2xl p-0 overflow-hidden rounded-none border-0">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -42,14 +42,11 @@ export const WelcomePopup = () => {
                 <h3 className="text-xl font-bold text-white">
                   How I Do (RESET)
                 </h3>
-                <p className="text-sm text-white">
-                  Enter your email for free music download
-                </p>
               </div>
               <form onSubmit={handleMusicSubmit} className="w-full space-y-3">
                 <Input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Enter email for free music download"
                   value={musicEmail}
                   onChange={(e) => setMusicEmail(e.target.value)}
                   className="bg-white/90 text-sm"
@@ -74,14 +71,11 @@ export const WelcomePopup = () => {
                 <h3 className="text-xl font-bold text-white">
                   "Life of Mike" starring RES coming summer 2025
                 </h3>
-                <p className="text-sm text-white">
-                  Enter your email to claim a free movie ticket
-                </p>
               </div>
               <form onSubmit={handleMovieSubmit} className="w-full space-y-3">
                 <Input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Enter your email for free movie ticket"
                   value={movieEmail}
                   onChange={(e) => setMovieEmail(e.target.value)}
                   className="bg-white/90 text-sm"
