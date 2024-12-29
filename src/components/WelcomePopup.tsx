@@ -23,7 +23,7 @@ export const WelcomePopup = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-4xl p-0 overflow-hidden">
+      <DialogContent className="max-w-2xl p-0 overflow-hidden">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -31,26 +31,31 @@ export const WelcomePopup = () => {
           className="grid grid-cols-1 md:grid-cols-2"
         >
           {/* Left Column - Music */}
-          <div className="p-8 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400">
-            <div className="flex flex-col items-center space-y-6">
+          <div className="p-6 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400">
+            <div className="flex flex-col items-center space-y-4">
               <img
                 src="/lovable-uploads/d84f923a-ca41-49c5-8f7d-78afa0bd5312.png"
                 alt="RES Album Cover"
-                className="w-64 h-64 object-cover rounded-lg shadow-lg"
+                className="w-48 h-48 object-cover rounded-lg shadow-lg"
               />
-              <h3 className="text-2xl font-bold text-white text-center">
-                Enter your email for free music download
-              </h3>
-              <form onSubmit={handleMusicSubmit} className="w-full space-y-4">
+              <div className="space-y-2 text-center">
+                <h3 className="text-xl font-bold text-white">
+                  How I Do (RESET)
+                </h3>
+                <p className="text-sm text-white">
+                  Enter your email for free music download
+                </p>
+              </div>
+              <form onSubmit={handleMusicSubmit} className="w-full space-y-3">
                 <Input
                   type="email"
                   placeholder="Enter your email"
                   value={musicEmail}
                   onChange={(e) => setMusicEmail(e.target.value)}
-                  className="bg-white/90"
+                  className="bg-white/90 text-sm"
                   required
                 />
-                <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600">
+                <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-sm">
                   Download
                 </Button>
               </form>
@@ -58,27 +63,31 @@ export const WelcomePopup = () => {
           </div>
 
           {/* Right Column - Movie */}
-          <div className="p-8 bg-black">
-            <div className="flex flex-col items-center space-y-6">
-              <div className="w-64 h-64 bg-gray-800 rounded-lg shadow-lg flex items-center justify-center">
-                <span className="text-gray-500 text-lg">Movie Poster Coming Soon</span>
+          <div className="p-6 bg-black">
+            <div className="flex flex-col items-center space-y-4">
+              <img
+                src="/lovable-uploads/f54a6319-c276-41cd-88ee-fdfa92d66154.png"
+                alt="Life of Mike Movie Poster"
+                className="w-48 h-48 object-cover rounded-lg shadow-lg"
+              />
+              <div className="space-y-2 text-center">
+                <h3 className="text-xl font-bold text-white">
+                  "Life of Mike" starring RES coming summer 2025
+                </h3>
+                <p className="text-sm text-white">
+                  Enter your email to claim a free movie ticket
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-white text-center">
-                Life of Mike starring RES coming summer 2025
-              </h3>
-              <p className="text-white text-center">
-                Enter your email to claim a free movie ticket
-              </p>
-              <form onSubmit={handleMovieSubmit} className="w-full space-y-4">
+              <form onSubmit={handleMovieSubmit} className="w-full space-y-3">
                 <Input
                   type="email"
                   placeholder="Enter your email"
                   value={movieEmail}
                   onChange={(e) => setMovieEmail(e.target.value)}
-                  className="bg-white/90"
+                  className="bg-white/90 text-sm"
                   required
                 />
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full text-sm">
                   Submit
                 </Button>
               </form>
