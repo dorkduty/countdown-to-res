@@ -23,7 +23,7 @@ export const WelcomePopup = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-2xl p-0 overflow-hidden rounded-none border-0">
+      <DialogContent className="max-w-2xl p-0 overflow-auto border-0 max-h-[90vh] md:max-h-[95vh]">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
