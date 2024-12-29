@@ -31,10 +31,6 @@ export const MovieInfo = () => {
       <p className="text-lg text-gray-300">
         Mike Smith (Miko DeFoor), a thriving real estate tycoon, lives a life devoid of close friends or family. As his birthday unfolds, his wife Celeste (Shareese Ballard) makes a heartfelt attempt to show him love, setting off a chain of events that shatter his expectations. By day's end, Mike is confronted with the stark reality of who genuinely cares for him and who does not.
       </p>
-      <div className="space-y-1">
-        <p className="text-sm uppercase tracking-wider text-gray-400">Director</p>
-        <p className="text-lg font-semibold text-gray-200">Derick Halliman</p>
-      </div>
     </motion.div>
   );
 };
