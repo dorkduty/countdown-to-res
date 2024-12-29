@@ -60,7 +60,7 @@ export const WelcomePopup = () => {
           </div>
 
           {/* Right Column - Movie */}
-          <div className="p-6 bg-black">
+          <div className="p-6 bg-primary">
             <div className="flex flex-col items-center space-y-4">
               <img
                 src="/lovable-uploads/e814f938-0883-488c-8a78-698a8364ffeb.png"
@@ -69,7 +69,7 @@ export const WelcomePopup = () => {
               />
               <div className="space-y-2 text-center">
                 <h3 className="text-xl font-bold text-white">
-                  "Life of Mike" starring RES coming summer 2025
+                  "Life of Mike" starring RES
                 </h3>
               </div>
               <form onSubmit={handleMovieSubmit} className="w-full space-y-3">
@@ -81,7 +81,7 @@ export const WelcomePopup = () => {
                   className="bg-white/90 text-sm"
                   required
                 />
-                <Button type="submit" className="w-full text-sm">
+                <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-sm">
                   Submit
                 </Button>
               </form>
