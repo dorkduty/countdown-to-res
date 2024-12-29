@@ -88,7 +88,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-8 py-12 md:py-20 text-white relative z-20">
+      <div className="container mx-auto px-8 py-8 md:py-20 text-white relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
