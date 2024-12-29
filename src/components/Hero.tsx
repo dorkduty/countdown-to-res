@@ -108,7 +108,7 @@ export const Hero = () => {
                 onClick={() => scrollToSection('spotify-player')}
                 className="bg-pink-400 hover:bg-pink-500"
               >
-                Reset Album
+                "How I Do (Reset) Album"
               </Button>
               <Button
                 variant="default"
