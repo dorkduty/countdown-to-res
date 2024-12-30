@@ -7,6 +7,7 @@ import { PeachDrop } from "@/components/PeachDrop";
 import { Footer } from "@/components/Footer";
 import { FloatingBar } from "@/components/FloatingBar";
 import { WelcomePopup } from "@/components/WelcomePopup";
+import { NewMerchButton } from "@/components/NewMerchButton";
 import { useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -22,6 +23,7 @@ const Index = () => {
   return (
     <main className="min-h-screen">
       <WelcomePopup />
+      <NewMerchButton />
       <Hero />
       <PeachDrop />
       <Bio />
