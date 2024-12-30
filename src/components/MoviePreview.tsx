@@ -14,7 +14,7 @@ export const MoviePreview = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-2"
+              className="space-y-1"
             >
               <div className="aspect-video rounded-lg overflow-hidden">
                 <div style={{padding:'41.7% 0 0 0', position:'relative'}}>
