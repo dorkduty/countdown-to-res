@@ -16,7 +16,7 @@ export const MoviePreview = () => {
               transition={{ duration: 0.8 }}
               className="space-y-2"
             >
-              <div className="aspect-video bg-black/40 rounded-lg overflow-hidden">
+              <div className="aspect-video rounded-lg overflow-hidden">
                 <div style={{padding:'41.7% 0 0 0', position:'relative'}}>
                   <iframe 
                     src="https://player.vimeo.com/video/1041238935?h=bd0f0f78bc&badge=0&autopause=0&player_id=0&app_id=58479" 
