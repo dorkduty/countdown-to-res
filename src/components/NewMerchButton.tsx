@@ -7,10 +7,10 @@ export const NewMerchButton = () => {
       <Button
         variant="default"
         className="bg-[#000000e6] hover:bg-black text-white rounded-none gap-2"
-        onClick={() => window.open('https://res.store', '_blank')}
+        onClick={() => window.open('https://www.mckieresmusic.com/', '_blank')}
       >
         <ShoppingBag className="h-4 w-4" />
-        New Merch
+        Buy Merch
       </Button>
     </div>
   );
