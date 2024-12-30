@@ -15,7 +15,7 @@ const Index = () => {
 
   useEffect(() => {
     if (isMobile) {
-      window.scrollTo(0, 20);
+      window.scrollTo(0, 50);
     }
   }, [isMobile]);
 
