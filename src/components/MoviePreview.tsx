@@ -17,16 +17,11 @@ export const MoviePreview = () => {
               className="space-y-2"
             >
               <div className="aspect-video bg-black/40 rounded-lg overflow-hidden">
-                <div style={{padding:'41.7% 0 0 0', position:'relative'}}>
-                  <iframe 
-                    src="https://player.vimeo.com/video/1041241030?h=1a111058d8&badge=0&autopause=0&player_id=0&app_id=58479" 
-                    style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}} 
-                    frameBorder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                    title="Life Of Mike | Official Trailer | Summer 2025"
-                  />
-                </div>
-                <script src="https://player.vimeo.com/api/player.js" async></script>
+                <img 
+                  src="/lovable-uploads/983dbb92-8396-4656-8439-bc781fbb807f.png"
+                  alt="Life of Mike Movie Poster"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <p className="text-sm text-gray-400 italic text-center">Featured song "All I Can" by RES</p>
             </motion.div>
