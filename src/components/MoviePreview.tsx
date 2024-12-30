@@ -28,7 +28,7 @@ export const MoviePreview = () => {
                 </div>
                 <script src="https://player.vimeo.com/api/player.js" async></script>
               </div>
-              <p className="text-sm text-gray-400 italic text-center mt-2">Featured song "All I Can" by RES</p>
+              <p className="text-sm text-gray-400 italic text-center">Featured song "All I Can" by RES</p>
             </motion.div>
           </div>
           <CastSection />
