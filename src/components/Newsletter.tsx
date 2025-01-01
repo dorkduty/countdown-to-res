@@ -10,7 +10,7 @@ export const Newsletter = () => {
   const handleClick = async () => {
     setIsSubmitting(true);
     try {
-      window.open('https://mountainparkmedia2.bubbleapps.io/version-test/life-of-mike?ticket=free', '_blank');
+      window.open('https://mountainparkmedia.com/life-of-mike?ticket=free', '_blank');
     } catch (error) {
       console.error('Error:', error);
       toast.error("There was an error. Please try again.");
