@@ -39,7 +39,7 @@ export const Newsletter = () => {
   return (
     <section 
       id="newsletter" 
-      className="py-20 relative"
+      className="py-32 relative" // Changed from py-20 to py-32 for more vertical padding
       style={{
         backgroundImage: "url('https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1736366248178x529973525327565900/RES-peach-drop')",
         backgroundSize: 'cover',
