@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 export const Hero = () => {
@@ -107,12 +106,6 @@ export const Hero = () => {
           <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[50%] max-w-[66%]">
             Welcome to the official RES website. Today, RES is expanding her artistic horizons with her feature film debut in "Life of Mike," while continuing to create innovative music that pushes boundaries and defies genre conventions.
           </p>
-          <Button
-            onClick={() => scrollToSection('about')}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
-          >
-            Meet RES
-          </Button>
         </motion.div>
       </div>
     </section>
