@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export const NewMerchButton = () => {
   return (
-    <div className="fixed top-4 right-4 z-50">
+    <div className="fixed top-4 right-4 z-50 hidden md:block">
       <Button
         variant="default"
         className="bg-[#000000e6] hover:bg-black text-white rounded-none gap-2"

@@ -31,8 +31,8 @@ export const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection, handleS
         </div>
         
         {/* Mobile Menu */}
-        <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden py-4`}>
-          <div className="flex flex-col space-y-4">
+        <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden py-4 bg-black/80 backdrop-blur-sm rounded-lg`}>
+          <div className="flex flex-col space-y-4 px-4">
             {navItems.map((item) => (
               <button
                 key={item.text}
