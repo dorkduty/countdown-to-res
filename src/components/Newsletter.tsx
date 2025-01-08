@@ -43,7 +43,7 @@ export const Newsletter = () => {
       style={{
         backgroundImage: "url('https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1736366248178x529973525327565900/RES-peach-drop')",
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'top center',
         backgroundRepeat: 'no-repeat'
       }}
     >
