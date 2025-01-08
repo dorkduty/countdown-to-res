@@ -13,6 +13,10 @@ export const Hero = () => {
     setIsMenuOpen(false);
   };
 
+  const handleShopClick = () => {
+    window.open('https://www.mckieresmusic.com/', '_blank');
+  };
+
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
       {/* Navigation */}
@@ -34,11 +38,13 @@ export const Hero = () => {
               {[
                 { text: 'ABOUT', id: 'about' },
                 { text: 'MUSIC', id: 'spotify-player' },
-                { text: 'FILM', id: 'movie-preview' }
+                { text: 'FILM', id: 'movie-preview' },
+                { text: 'SHOP', action: handleShopClick },
+                { text: 'SIGN UP', id: 'newsletter' }
               ].map((item) => (
                 <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  key={item.text}
+                  onClick={() => item.action ? item.action() : scrollToSection(item.id)}
                   className="text-white hover:text-purple-400 transition-colors text-left tracking-widest"
                 >
                   {item.text}
@@ -53,11 +59,13 @@ export const Hero = () => {
               {[
                 { text: 'ABOUT', id: 'about' },
                 { text: 'MUSIC', id: 'spotify-player' },
-                { text: 'FILM', id: 'movie-preview' }
+                { text: 'FILM', id: 'movie-preview' },
+                { text: 'SHOP', action: handleShopClick },
+                { text: 'SIGN UP', id: 'newsletter' }
               ].map((item) => (
                 <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  key={item.text}
+                  onClick={() => item.action ? item.action() : scrollToSection(item.id)}
                   className="text-white hover:text-purple-400 transition-colors text-lg tracking-[0.3em]"
                 >
                   {item.text}
@@ -93,10 +101,10 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left">
-            (RES)ET with RES
+          <h1 className="text-xl sm:text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left uppercase">
+            The official RES website
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[85%] max-w-[85%]">
+          <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[33%] max-w-[66%]">
             Welcome to the official RES website. Today, RES is expanding her artistic horizons with her feature film debut in "Life of Mike," while continuing to create innovative music that pushes boundaries and defies genre conventions.
           </p>
         </motion.div>
