@@ -1,9 +1,9 @@
-import { Menu } from "lucide-react";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Navigation } from "./hero/Navigation";
+import { HeroContent } from "./hero/HeroContent";
+import { BackgroundImage } from "./hero/BackgroundImage";
 
 export const Hero = () => {
-  console.log("Hero component rendered");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
@@ -21,98 +21,24 @@ export const Hero = () => {
     window.open('https://www.mckieresmusic.com/', '_blank');
   };
 
+  // Add effect to ensure newsletter section exists
+  useEffect(() => {
+    const newsletterSection = document.getElementById('newsletter');
+    if (!newsletterSection) {
+      console.error('Newsletter section not found in the DOM');
+    }
+  }, []);
+
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
-      {/* Navigation */}
-      <nav className="w-full fixed top-0 z-30 pt-6">
-        <div className="max-w-screen-xl mx-auto px-4">
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex justify-end py-4">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-purple-400 transition-colors"
-            >
-              <Menu className="h-6 w-6" />
-            </button>
-          </div>
-          
-          {/* Mobile Menu */}
-          <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden py-4`}>
-            <div className="flex flex-col space-y-4">
-              {[
-                { text: 'ABOUT', id: 'about' },
-                { text: 'MUSIC', id: 'spotify-player' },
-                { text: 'FILM', id: 'movie-preview' },
-                { text: 'SHOP', action: handleShopClick },
-                { text: 'SIGN UP', id: 'newsletter' }
-              ].map((item) => (
-                <button
-                  key={item.text}
-                  onClick={() => item.action ? item.action() : scrollToSection(item.id)}
-                  className="text-white hover:text-purple-400 transition-colors text-left tracking-widest"
-                >
-                  {item.text}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex justify-center py-4">
-            <div className="flex space-x-12">
-              {[
-                { text: 'ABOUT', id: 'about' },
-                { text: 'MUSIC', id: 'spotify-player' },
-                { text: 'FILM', id: 'movie-preview' },
-                { text: 'SHOP', action: handleShopClick },
-                { text: 'SIGN UP', id: 'newsletter' }
-              ].map((item) => (
-                <button
-                  key={item.text}
-                  onClick={() => item.action ? item.action() : scrollToSection(item.id)}
-                  className="text-white hover:text-purple-400 transition-colors text-lg tracking-[0.3em]"
-                >
-                  {item.text}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Image Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcSet="/lovable-uploads/cc06fe20-a9e2-4d30-bbe4-91b50f03f583.png"
-          />
-          <img
-            src="/lovable-uploads/af5a2352-690a-4a57-9036-e34c78f1159e.png"
-            alt="RES artist promotional image"
-            className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover md:object-center object-[40%] sm:object-[40%]"
-            style={{ zIndex: 0 }}
-          />
-        </picture>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40" style={{ zIndex: 1 }}></div>
-      </div>
-
-      {/* Content */}
-      <div className="container mx-auto px-8 py-8 md:py-20 text-white relative z-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl"
-        >
-          <h1 className="text-xl sm:text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left uppercase">
-            The official RES website
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[50%] max-w-[66%]">
-            Welcome to the official RES website. Today, RES is expanding her artistic horizons with her feature film debut in "Life of Mike," while continuing to create innovative music that pushes boundaries and defies genre conventions.
-          </p>
-        </motion.div>
-      </div>
+      <Navigation 
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        scrollToSection={scrollToSection}
+        handleShopClick={handleShopClick}
+      />
+      <BackgroundImage />
+      <HeroContent />
     </section>
   );
 };
