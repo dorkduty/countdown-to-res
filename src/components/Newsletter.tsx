@@ -1,19 +1,36 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 export const Newsletter = () => {
+  const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleClick = async () => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);
+
     try {
-      window.open('https://mountainparkmedia.com/life-of-mike?ticket=free', '_blank');
+      const { error } = await supabase
+        .from('subscribers')
+        .insert([
+          { 
+            email,
+            subscription_type: 'movie',
+            created_at: new Date().toISOString()
+          }
+        ]);
+
+      if (error) throw error;
+
+      toast.success("Thanks for subscribing!");
+      setEmail("");
     } catch (error) {
-      console.error('Error:', error);
-      toast.error("There was an error. Please try again.");
+      console.error('Error saving subscription:', error);
+      toast.error("There was an error saving your subscription. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -30,19 +47,29 @@ export const Newsletter = () => {
           className="max-w-2xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-            Claim Free Movie Tickets
+            Sign Up
           </h2>
           <p className="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
-            Be the first to see Life of Mike when it arrives in theaters in 2025.
+            Follow and subscribe to be one of the first to know the latest news on RES.
           </p>
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8"
-            onClick={handleClick}
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Loading..." : "Get Your Free Ticket"}
-          </Button>
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={isSubmitting}
+              className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-gray-300"
+            />
+            <Button 
+              type="submit" 
+              className="bg-white text-purple-600 hover:bg-white/90 whitespace-nowrap"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Subscribing..." : "Subscribe"}
+            </Button>
+          </form>
         </motion.div>
       </div>
     </section>

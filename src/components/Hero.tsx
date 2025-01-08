@@ -104,9 +104,15 @@ export const Hero = () => {
           <h1 className="text-xl sm:text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left uppercase">
             The official RES website
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[33%] max-w-[66%]">
+          <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[50%] max-w-[66%]">
             Welcome to the official RES website. Today, RES is expanding her artistic horizons with her feature film debut in "Life of Mike," while continuing to create innovative music that pushes boundaries and defies genre conventions.
           </p>
+          <Button
+            onClick={() => scrollToSection('about')}
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+          >
+            Meet RES
+          </Button>
         </motion.div>
       </div>
     </section>

@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
 import { MovieInfo } from "./movie/MovieInfo";
 import { CastSection } from "./movie/CastSection";
+import { Button } from "./ui/button";
 
 export const MoviePreview = () => {
+  const handleGetTickets = () => {
+    window.open('https://mountainparkmedia.com/life-of-mike?ticket=free', '_blank');
+  };
+
   return (
     <section id="movie-preview" className="py-20 bg-gradient-to-b from-black to-purple-900 text-white">
       <div className="container mx-auto px-4">
@@ -29,6 +34,15 @@ export const MoviePreview = () => {
             </motion.div>
           </div>
           <CastSection />
+          <div className="text-center mt-12">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8"
+              onClick={handleGetTickets}
+            >
+              Get Your Free Ticket
+            </Button>
+          </div>
         </div>
       </div>
     </section>

@@ -29,7 +29,8 @@ const Index = () => {
       <MoviePreview />
       <Newsletter />
       <Footer />
-      <FloatingBar />
+      {/* Floating bar hidden but kept in code for future use */}
+      {/* <FloatingBar /> */}
     </main>
   );
 };
