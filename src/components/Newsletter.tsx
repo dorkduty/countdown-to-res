@@ -37,8 +37,18 @@ export const Newsletter = () => {
   };
 
   return (
-    <section id="newsletter" className="py-20 bg-black">
-      <div className="container mx-auto px-4 text-center">
+    <section 
+      id="newsletter" 
+      className="py-20 relative"
+      style={{
+        backgroundImage: "url('https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1736366248178x529973525327565900/RES-peach-drop')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/70" /> {/* Overlay for better text readability */}
+      <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
