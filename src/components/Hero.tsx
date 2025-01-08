@@ -7,10 +7,13 @@ export const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
-    console.log("Scrolling to section:", id);
+    console.log("Attempting to scroll to section:", id);
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      console.log("Element found, scrolling to:", id);
+      const yOffset = -100; // Offset to account for fixed header
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
       setIsMenuOpen(false);
     } else {
       console.warn(`Element with id ${id} not found`);
@@ -21,11 +24,13 @@ export const Hero = () => {
     window.open('https://www.mckieresmusic.com/', '_blank');
   };
 
-  // Add effect to ensure newsletter section exists
+  // Add effect to ensure newsletter section exists and log its presence
   useEffect(() => {
     const newsletterSection = document.getElementById('newsletter');
-    if (!newsletterSection) {
-      console.error('Newsletter section not found in the DOM');
+    if (newsletterSection) {
+      console.log('Newsletter section found in DOM');
+    } else {
+      console.error('Newsletter section not found in DOM');
     }
   }, []);
 

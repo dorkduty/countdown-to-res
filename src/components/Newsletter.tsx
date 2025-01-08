@@ -37,7 +37,7 @@ export const Newsletter = () => {
   };
 
   return (
-    <section className="py-20 bg-black">
+    <section id="newsletter" className="py-20 bg-black">
       <div className="container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
