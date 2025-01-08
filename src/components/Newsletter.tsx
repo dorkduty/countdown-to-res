@@ -47,7 +47,7 @@ export const Newsletter = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="absolute inset-0 bg-black/70" /> {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40" /> {/* Reduced opacity from 70% to 40% */}
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
