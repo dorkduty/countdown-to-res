@@ -3,7 +3,6 @@ import { MoviePreview } from "@/components/MoviePreview";
 import { Newsletter } from "@/components/Newsletter";
 import { Bio } from "@/components/Bio";
 import { SpotifyPlayer } from "@/components/SpotifyPlayer";
-import { PeachDrop } from "@/components/PeachDrop";
 import { Footer } from "@/components/Footer";
 import { FloatingBar } from "@/components/FloatingBar";
 import { WelcomePopup } from "@/components/WelcomePopup";
@@ -25,7 +24,6 @@ const Index = () => {
       <WelcomePopup />
       <NewMerchButton />
       <Hero />
-      <PeachDrop />
       <Bio />
       <SpotifyPlayer />
       <MoviePreview />

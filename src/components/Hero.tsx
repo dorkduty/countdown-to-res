@@ -15,8 +15,8 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
-      {/* Navigation - hidden for now */}
-      <nav className="w-full fixed top-0 z-30 pt-6 hidden">
+      {/* Navigation */}
+      <nav className="w-full fixed top-0 z-30 pt-6">
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Mobile Menu Button */}
           <div className="md:hidden flex justify-end py-4">
@@ -33,7 +33,6 @@ export const Hero = () => {
             <div className="flex flex-col space-y-4">
               {[
                 { text: 'ABOUT', id: 'about' },
-                { text: 'NYE', id: 'peach-drop' },
                 { text: 'MUSIC', id: 'spotify-player' },
                 { text: 'FILM', id: 'movie-preview' }
               ].map((item) => (
@@ -53,7 +52,6 @@ export const Hero = () => {
             <div className="flex space-x-12">
               {[
                 { text: 'ABOUT', id: 'about' },
-                { text: 'NYE', id: 'peach-drop' },
                 { text: 'MUSIC', id: 'spotify-player' },
                 { text: 'FILM', id: 'movie-preview' }
               ].map((item) => (
@@ -98,41 +96,9 @@ export const Hero = () => {
           <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left">
             (RES)ET with RES
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[50%] max-w-[85%]">
-            Ring in 2025 with acclaimed singer RES at the Atlanta Peach Drop, and get an exclusive first look at "Life of Mike," her feature film debut!
+          <p className="text-xl md:text-2xl mb-8 text-gray-200 text-left md:max-w-[85%] max-w-[85%]">
+            Welcome to the official RES website. Today, RES is expanding her artistic horizons with her feature film debut in "Life of Mike," while continuing to create innovative music that pushes boundaries and defies genre conventions.
           </p>
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-wrap gap-4">
-              <Button
-                variant="default"
-                onClick={() => scrollToSection('spotify-player')}
-                className="bg-pink-400 hover:bg-pink-500"
-              >
-                "How I Do (Reset) Album"
-              </Button>
-              <Button
-                variant="default"
-                onClick={() => scrollToSection('movie-preview')}
-                className="bg-red-400 hover:bg-red-500"
-              >
-                "Life of Mike" Trailer
-              </Button>
-              <Button
-                variant="default"
-                onClick={() => scrollToSection('peach-drop')}
-                className="bg-purple-400 hover:bg-purple-500"
-              >
-                ATL Peach Drop
-              </Button>
-            </div>
-            <Button 
-              size="lg" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 w-fit hidden"
-              onClick={() => scrollToSection('peach-drop')}
-            >
-              Learn More
-            </Button>
-          </div>
         </motion.div>
       </div>
     </section>
