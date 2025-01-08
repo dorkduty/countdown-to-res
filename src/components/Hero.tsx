@@ -7,9 +7,14 @@ export const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
+    console.log("Scrolling to section:", id);
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    } else {
+      console.warn(`Element with id ${id} not found`);
+    }
   };
 
   const handleShopClick = () => {
