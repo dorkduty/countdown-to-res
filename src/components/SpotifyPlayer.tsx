@@ -20,7 +20,7 @@ export const SpotifyPlayer = () => {
           <div className="aspect-video">
             <iframe
               style={{ borderRadius: '12px' }}
-              src="https://open.spotify.com/embed/artist/56YiNz2C704YPpRtPvMBg7?utm_source=generator"
+              src="https://open.spotify.com/embed/album/7rkWZxLgc5zy7sIr6VAwOj?utm_source=generator"
               width="100%"
               height="450"
               frameBorder="0"
