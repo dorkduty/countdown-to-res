@@ -20,11 +20,6 @@ export const castMembers = [
     image: "/lovable-uploads/41a868d7-dd88-4d41-9929-f49e032ce64d.png"
   },
   {
-    name: "Njema Williams",
-    role: "Luther",
-    image: "/lovable-uploads/3750ced3-77ee-4c9e-a29a-7789f183f03f.png"
-  },
-  {
     name: "Toni Belafonte",
     role: "Tiffany",
     image: "/lovable-uploads/3df10637-d724-4fcb-a53a-325fad440721.png"
@@ -33,11 +28,6 @@ export const castMembers = [
     name: "Jeff Cole",
     role: "Manny",
     image: "/lovable-uploads/dfb2f6a7-28f0-49d2-8fda-6a6cde89c9a0.png"
-  },
-  {
-    name: "Jason Gilmore",
-    role: "Dave",
-    image: "/lovable-uploads/e581e58d-a588-4b85-bec0-a328494abd3b.png"
   },
   {
     name: "Ole Goode",
