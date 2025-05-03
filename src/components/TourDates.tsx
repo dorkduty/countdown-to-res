@@ -11,7 +11,7 @@ export const TourDates = () => {
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-b from-black to-purple-900 text-white">
+    <div id="tour-dates" className="py-20 bg-gradient-to-b from-black to-purple-900 text-white">
       <h3 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
         Upcoming Tour Dates
       </h3>

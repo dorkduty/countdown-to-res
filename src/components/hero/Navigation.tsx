@@ -36,7 +36,7 @@ export const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection, handleS
             {navItems.map((item) => (
               <button
                 key={item.text}
-                onClick={() => item.action ? item.action() : scrollToSection(item.id)}
+                onClick={() => scrollToSection(item.id)}
                 className="text-white hover:text-purple-400 transition-colors text-left tracking-widest"
               >
                 {item.text}
@@ -51,7 +51,7 @@ export const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection, handleS
             {navItems.map((item) => (
               <button
                 key={item.text}
-                onClick={() => item.action ? item.action() : scrollToSection(item.id)}
+                onClick={() => scrollToSection(item.id)}
                 className="text-white hover:text-purple-400 transition-colors text-lg tracking-[0.3em]"
               >
                 {item.text}
