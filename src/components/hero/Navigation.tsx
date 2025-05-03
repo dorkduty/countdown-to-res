@@ -13,7 +13,7 @@ export const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection, handleS
     { text: 'ABOUT', id: 'about' },
     { text: 'MUSIC', id: 'spotify-player' },
     { text: 'FILM', id: 'movie-preview' },
-    { text: 'SHOP', action: handleShopClick },
+    { text: 'EVENTS', id: 'tour-dates' },
     { text: 'SIGN UP', id: 'newsletter' }
   ];
 

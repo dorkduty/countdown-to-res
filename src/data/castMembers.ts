@@ -33,5 +33,10 @@ export const castMembers = [
     name: "Ole Goode",
     role: "Pete",
     image: "/lovable-uploads/6a1b994a-2975-442c-85e8-44045ed05f17.png"
+  },
+  {
+    name: "Shaun Mixon",
+    role: "Luther",
+    image: "https://3a5ae66a6e58ba5f79caf8a72e703216.cdn.bubble.io/f1745844730989x705675730094948100/Shaun%20Mixon.png"
   }
 ];

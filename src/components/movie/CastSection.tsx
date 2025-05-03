@@ -17,3 +17,5 @@ export const CastSection = () => {
     </motion.div>
   );
 };
+
+export default CastSection;
