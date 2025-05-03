@@ -14,7 +14,8 @@ export const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection, handleS
     { text: 'MUSIC', id: 'spotify-player' },
     { text: 'FILM', id: 'movie-preview' },
     { text: 'EVENTS', id: 'tour-dates' },
-    { text: 'SIGN UP', id: 'newsletter' }
+    { text: 'SIGN UP', id: 'newsletter' },
+    { text: 'SHOP', action: () => window.open('https://www.mckieresmusic.com/', '_blank') }
   ];
 
   return (
@@ -36,7 +37,7 @@ export const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection, handleS
             {navItems.map((item) => (
               <button
                 key={item.text}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => item.id ? scrollToSection(item.id) : item.action?.()}
                 className="text-white hover:text-purple-400 transition-colors text-left tracking-widest"
               >
                 {item.text}
@@ -51,7 +52,7 @@ export const Navigation = ({ isMenuOpen, setIsMenuOpen, scrollToSection, handleS
             {navItems.map((item) => (
               <button
                 key={item.text}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => item.id ? scrollToSection(item.id) : item.action?.()}
                 className="text-white hover:text-purple-400 transition-colors text-lg tracking-[0.3em]"
               >
                 {item.text}
